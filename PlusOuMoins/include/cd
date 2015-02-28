@@ -1,0 +1,40 @@
+#!/bin/bash
+## pres.sh for  in /home/tom/Projets/PlusOuMoins_local
+## 
+## Made by PAOLINI Tom
+## Login   <paolin_t@etna-alternance.net>
+## 
+## Started on  Mon Nov  3 17:54:05 2014 PAOLINI Tom
+## Last update Tue Nov  4 10:03:00 2014 PAOLINI Tom
+##
+
+
+
+
+script()
+{
+    string="4, 8, 15, 16, 23 et 42, cette suite s'affiche sans 
+raison a chaque fois que le jeu MagicNumber se lance.
+Y aurais t-il une explication ? D'apres les developpeurs du jeu,
+Timothé GUIBERT et Tom PAOLINI, cette suite coinciderait avec
+l'équation de Valenzetti, développée en 1962 par Enzo Valenzetti, 
+mathématicien reclus de l'université de Princetown. 
+Elle est le résultat des efforts réalisés après la crise du missile 
+cubain entre les USA et l'URSS afin de trouver une solution aux 
+hostilités et au danger imminent d'un désastre causé par la guerre froide. 
+L'équation a été secrètement commissionnée par le Conseil de Sécurité de l'ONU 
+et a été utilisée pour prédire l'extinction de l'humanité.
+"
+
+
+    echo -e "\e[0;36m"
+    
+    for (( i=0; i<${#string}; i++ )); do
+	echo -ne "${string:$i:1}"
+	sleep 0.06
+    done
+    
+    echo -e "\e[0;0m"
+}
+
+script
